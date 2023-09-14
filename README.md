@@ -15,7 +15,7 @@ http://localhost:3000/docs
 ``
 
 
-+ de arrivalRate: 200  aconteceu esse erro no test ´errors.ECONNREFUSED: ........................................................... 188´
++ de arrivalRate: 200  aconteceu esse erro no tests ´errors.ECONNREFUSED: ........................................................... 188´
              
 
 o tests no meu pc :
