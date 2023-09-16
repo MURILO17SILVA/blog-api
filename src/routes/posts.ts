@@ -6,7 +6,7 @@ import { validateEntity } from '../utils/validation'
 import { decodeUserEmailFromToken, verifyToken } from '../utils/authentication'
 
 export const postRouter = Router()
-const postCtrl = new PostController()
+export const postCtrl = new PostController()
 const userCtrl = new UserController()
 
 postRouter.post('/', verifyToken, async (req: Request, res: Response) => {
@@ -44,18 +44,6 @@ postRouter.get('/:id', async (req: Request, res: Response) => {
   }
 
   return res.status(400).json({ message: 'Invalid id' })
-})
-
-postRouter.get('/user/:userId', async (req: Request, res: Response) => {
-  const { userId } = req.params
-
-  const userIdNumber = parseInt(userId)
-  if (!isNaN(userIdNumber)) {
-    const posts = await postCtrl.findAllByUserId(userIdNumber)
-    return res.status(200).json({ posts })
-  }
-
-  return res.status(400).json({ message: 'Invalid user id' })
 })
 
 postRouter.delete('/:id', verifyToken, async (req: Request, res: Response) => {
