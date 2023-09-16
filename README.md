@@ -7,7 +7,7 @@ Passos para executar a API:
 1. Execute o comando `npm i` ou `yarn`
 2. Execute o comando `yarn start` ou `npm start`
 
-
+3. Execute o camando do tests  `artillery run .\load_tests\find_posts.yaml`
 Após executar a API, é possível acessar a documentação por meio da url:
 
 ```
